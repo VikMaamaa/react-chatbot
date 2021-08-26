@@ -1,10 +1,22 @@
+/*eslint-disable*/
 import React from 'react'
-import Navbar from './Navbar'
+import Chatbot from 'react-chatbot-kit'
+import config from "./chatbot/config"
+import ActionProvider from "./chatbot/ActionProvider"
+import MessageParser from "./chatbot/MessageParser"
+
+import "./App.css"
+
 function App() {
   return (
-    <>
-      <h2>navbar project setup</h2>
-    </>
+    <div className="App">
+      <div style={{ maxWidth: "300px" }}>
+        <Chatbot 
+        config={config}
+        actionProvider={ActionProvider} 
+        messageParser={MessageParser}/>
+      </div>
+    </div>
   )
 }
 
